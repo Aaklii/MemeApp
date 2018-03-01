@@ -8,17 +8,33 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
     private static final int RESULT_LOAD_IMAGE = 1;
+
+    TextView topText;
+    TextView bottomText;
+    EditText editTop ;
+    EditText editBottom;
+    ImageView imageView;
+
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        topText = (TextView) findViewById(R.id.memeTopText);
+        bottomText = (TextView) findViewById(R.id.memeBottomText);
+        editBottom = (EditText) findViewById(R.id.editBottom);
+        editTop = (EditText) findViewById(R.id.editTop);
+        imageView = (ImageView) findViewById(R.id.memeImage);
+
     }
 
     public void addImage(View view) {
@@ -55,6 +71,9 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void tryMeme(View view) {
+
+        topText.setText(editTop.getText().toString());
+        bottomText.setText(editBottom.getText().toString());
 
     }
 

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Meme App</string>
+    <string name="enter_top_meme_text">Enter Top Meme Text</string>
+    <string name="enter_bottom_meme_text">Enter Bottom Meme Text</string>
+    <string name="add_image">Add Image</string>
+    <string name="try_meme">Try Meme</string>
+    <string name="meme_top_text">Meme Top Text</string>
+    <string name="meme_bottom_text">Meme Bottom Text</string>
+    <string name="save_image">Save Image</string>
+</resources>

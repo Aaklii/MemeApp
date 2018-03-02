@@ -7,38 +7,68 @@
     android:orientation="vertical"
     tools:context="practice.aaklii.memeapp.MainActivity">
 
-    <EditText
+    <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/enter_top_meme_text"
-        android:id="@+id/editTop"/>
+        android:id="@+id/user_textInput"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+       >
 
-    <EditText
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_top_meme_text"
+            android:id="@+id/editTop"
+            android:inputType="text"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/enter_bottom_meme_text"
-        android:id="@+id/editBottom"/>
+        android:id="@+id/user_textInput2"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/enter_bottom_meme_text"
+            android:id="@+id/editBottom"
+            android:inputType="text"/>
+
+    </android.support.design.widget.TextInputLayout>
 
     <Button
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:text="@string/add_image"
-        android:onClick="addImage"/>
+        android:onClick="addImage"
+        android:textStyle="bold"
+       style="@style/FlatButton"/>
 
     <Button
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:text="@string/try_meme"
-        android:onClick="tryMeme"/>
+        android:onClick="tryMeme"
+        android:textStyle="bold"
+        style="@style/FlatButton"/>
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_height="240dp"
         android:id="@+id/lay">
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="250dp"
+            android:layout_height="240dp"
             android:id="@+id/memeImage"
             android:src="@drawable/ic_launcher_background"/>
 
@@ -66,11 +96,16 @@
             />
 
     </RelativeLayout>
+
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textStyle="bold"
         android:text="@string/save_image"
-        android:onClick="saveImage"/>
+        android:onClick="saveImage"
+        style="@style/FlatButton"
+        />
+
 
 
 </LinearLayout>

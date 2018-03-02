@@ -57,8 +57,7 @@ public class MainActivity extends AppCompatActivity {
         startActivityForResult(intent, RESULT_LOAD_IMAGE);
     }
 
-    // *Issue with Adding Image
-    @Override
+    // Issue Solved worked after giving permission manually
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
@@ -104,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     // function to save image
-    // *Issue with saving image
+    // Issue Solved worked after giving permission manually.
     public void saveImage(View view){
         View content = findViewById(R.id.lay);
         Bitmap bitmap = getScreenshot(content);
